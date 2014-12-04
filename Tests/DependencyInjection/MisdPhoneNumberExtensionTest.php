@@ -40,6 +40,7 @@ class MisdPhoneNumberExtensionTest extends TestCase
           'libphonenumber.phone_number_util',
           'libphonenumber\PhoneNumberUtil'
         );
+
         if (class_exists('libphonenumber\geocoding\PhoneNumberOfflineGeocoder') && extension_loaded('intl')) {
             $this->assertHasService(
               'libphonenumber.phone_number_offline_geocoder',
@@ -64,6 +65,7 @@ class MisdPhoneNumberExtensionTest extends TestCase
               'libphonenumber\PhoneNumberToTimeZonesMapper'
             );
         }
+
         $this->assertHasService(
           'misd_phone_number.templating.helper.format',
           'Misd\PhoneNumberBundle\Templating\Helper\PhoneNumberFormatHelper'
