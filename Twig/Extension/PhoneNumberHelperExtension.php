@@ -44,7 +44,7 @@ class PhoneNumberHelperExtension extends Extension
     {
         return array(
             new SimpleFunction('phone_number_format', array($this->helper, 'format')),
-            new SimpleFunction('phone_number_is_mobile', array($this->helper, 'isMobile')),
+            new SimpleFunction('phone_number_is_type', array($this->helper, 'isType')),
         );
     }
 
