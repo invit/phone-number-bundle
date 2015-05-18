@@ -43,7 +43,7 @@ class PhoneNumberHelperExtensionTest extends TestCase
         $this->assertCount(2, $functions);
         $this->assertInstanceOf('Twig_SimpleFunction', $functions[0]);
         $this->assertSame('phone_number_format', $functions[0]->getName());
-        $this->assertSame('phone_number_is_mobile', $functions[1]->getName());
+        $this->assertSame('phone_number_is_type', $functions[1]->getName());
 
         $formatCallable = $functions[0]->getCallable();
         $isMobileCallable = $functions[1]->getCallable();
@@ -51,7 +51,7 @@ class PhoneNumberHelperExtensionTest extends TestCase
         $this->assertSame($helper, $formatCallable[0]);
         $this->assertSame('format', $formatCallable[1]);
         $this->assertSame($helper, $isMobileCallable[0]);
-        $this->assertSame('isMobile', $isMobileCallable[1]);
+        $this->assertSame('isType', $isMobileCallable[1]);
     }
 
     public function testGetName()
